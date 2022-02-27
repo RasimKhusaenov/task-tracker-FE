@@ -1,10 +1,10 @@
-import Login from "./pages/login.js";
+import Login from "./pages/Login";
 
 function App() {
   return (
     <div className="App">
-        <Login></Login>
-        TaskTracker
+      <Login/>
+      TaskTracker
     </div>
   );
 }
