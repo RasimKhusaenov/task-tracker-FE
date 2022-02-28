@@ -16,13 +16,13 @@ function AuthorizationForm(props) {
     console.log(name + " input: " + value);
   }
 
-  function onBlueField(event) {
+  function onBlurField(event) {
     event.target.value = event.target.value.trim();
   }
 
   return (
     <Form action={action} method={method} id="authForm">
-      <InputField fieldName="Login" inputType="login" placeholder="intern.internov@flatstack.dev" onChange={onChangeField} onBlur={onBlueField} />
+      <InputField fieldName="Login" inputType="login" placeholder="intern.internov@flatstack.dev" onChange={onChangeField} onBlur={onBlurField} />
       <InputField fieldName="Password" inputType="password" placeholder="********" onChange={onChangeField} />
       <input type="submit" value="Login" />
     </Form>
