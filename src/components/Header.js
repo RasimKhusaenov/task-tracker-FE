@@ -12,7 +12,7 @@ const Wrapper = styled.section`
   background: white;
 `;
 
-function Header(props) {
+export default function Header(props) {
   const { children } = props
   return (
     <Wrapper>
@@ -20,5 +20,3 @@ function Header(props) {
     </Wrapper>
   );
 }
-
-export default Header;
