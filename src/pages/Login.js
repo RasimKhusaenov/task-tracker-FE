@@ -3,7 +3,7 @@ import Header from "../components/Header";
 import AuthorizationForm from "../components/AuthorizationForm";
 
 
-function Login() {
+export default function Login() {
   return (
     <div className="Login">
       <Header>
@@ -13,5 +13,3 @@ function Login() {
     </div>
   );
 }
-
-export default Login;
