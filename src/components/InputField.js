@@ -10,7 +10,7 @@ const Input = styled.input`
   margin-left: 0.5em;
 `;
 
-function InputField(props) {
+export default function InputField(props) {
   const { fieldName, inputType, inputId, placeholder, onChange, onBlur, value } = props;
   return (
     <Label>
@@ -27,5 +27,3 @@ function InputField(props) {
     </Label>
   );
 }
-
-export default InputField;
