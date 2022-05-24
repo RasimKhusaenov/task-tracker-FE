@@ -13,10 +13,10 @@ const Wrapper = styled.section`
 `;
 
 function Header(props) {
-  const { title } = props
+  const { children } = props
   return (
     <Wrapper>
-      <Title>{title}</Title>
+      <Title>{children}</Title>
     </Wrapper>
   );
 }

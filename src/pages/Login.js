@@ -6,7 +6,9 @@ import AuthorizationForm from "../components/AuthorizationForm";
 function Login() {
   return (
     <div className="Login">
-      <Header title="Login Page" />
+      <Header>
+        Login Page
+      </Header>
       <AuthorizationForm/>
     </div>
   );

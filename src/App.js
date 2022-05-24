@@ -6,7 +6,7 @@ function App() {
   return (
     <div className="App">
       <Header>
-        <HeaderTitle>Task Tracker</HeaderTitle>
+        Task Tracker
       </Header>
       <hr />
       <Login/>
