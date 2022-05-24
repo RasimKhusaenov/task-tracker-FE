@@ -8,22 +8,38 @@ const Form = styled.form`
 `;
 
 function AuthorizationForm(props) {
-  const { action, method } = props
+  const { action, method } = props;
+  const [formState, setFormState] = useState({ login: "", password: "" });
 
   function onChangeField(event) {
-    const name = event.target.name ? event.target.name : "noNameField";
+    const name = event.target.name;
     const value = event.target.value;
-    console.log(name + " input: " + value);
+    setFormState((currentState) => ({ ...currentState, [name]: value }))
   }
 
   function onBlurField(event) {
-    event.target.value = event.target.value.trim();
+    const name = event.target.name;
+    const value = event.target.value;
+    setFormState((currentState) => ({ ...currentState, [name]: value.trim() }))
   }
 
   return (
     <Form action={action} method={method} id="authForm">
-      <InputField fieldName="Login" inputType="login" placeholder="intern.internov@flatstack.dev" onChange={onChangeField} onBlur={onBlurField} />
-      <InputField fieldName="Password" inputType="password" placeholder="********" onChange={onChangeField} />
+      <InputField
+        fieldName="Login"
+        inputType="login"
+        placeholder="intern.internov@flatstack.dev"
+        onChange={onChangeField}
+        onBlur={onBlurField}
+        value={formState.login}
+      />
+      <InputField
+        fieldName="Password"
+        inputType="password"
+        placeholder="********"
+        onChange={onChangeField}
+        value={formState.password}
+      />
       <input type="submit" value="Login" />
     </Form>
   );

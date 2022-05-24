@@ -11,11 +11,19 @@ const Input = styled.input`
 `;
 
 function InputField(props) {
-  const { fieldName, inputType, inputId, placeholder, onChange, onBlur } = props;
+  const { fieldName, inputType, inputId, placeholder, onChange, onBlur, value } = props;
   return (
     <Label>
       {fieldName}:
-      <Input type={inputType} name={fieldName} id={inputId} placeholder={placeholder} onChange={onChange} onBlur={onBlur} />
+      <Input
+        value={value}
+        type={inputType}
+        name={fieldName}
+        id={inputId}
+        placeholder={placeholder}
+        onChange={onChange}
+        onBlur={onBlur}
+      />
     </Label>
   );
 }

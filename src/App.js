@@ -5,7 +5,9 @@ import React from "react";
 function App() {
   return (
     <div className="App">
-      <Header title="Task Tracker" />
+      <Header>
+        <HeaderTitle>Task Tracker</HeaderTitle>
+      </Header>
       <hr />
       <Login/>
       <hr />
