@@ -18,6 +18,11 @@
         "namedComponents": ["arrow-function"]
       }
     ],
+    "no-restricted-exports": ["error", {
+      "restrictedNamedExports": [
+        "then"
+      ]
+    }],
     "react/prop-types": 0,
     "arrow-body-style": 0,
     "no-console": [
