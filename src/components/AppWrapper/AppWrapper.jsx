@@ -12,11 +12,13 @@ const StyledAppWrapper = styled.div`
 `;
 
 const AppWrapper = () => {
- return <StyledAppWrapper>
+  return (
+    <StyledAppWrapper>
       <Header />
       <MainContent />
       <Footer />
-    </StyledAppWrapper>;
+    </StyledAppWrapper>
+  );
 };
 
 export default AppWrapper;
