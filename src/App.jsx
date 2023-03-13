@@ -1,17 +1,15 @@
-import DefaultTemplate from "./components/templates/DefaultTemplate";
-import List from "./components/atoms/List";
-import Button from "./components/atoms/Button";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import HomePage from "./pages/index";
+import ProjectsPage from "./pages/projects";
 
 const App = () => {
   return (
-    <DefaultTemplate>
-      <List>
-        <li>Рубист</li>
-        <li>Работаю в компании больше года</li>
-        <li>Хочу понять фронтенд</li>
-      </List>
-      <Button label="OK" />
-    </DefaultTemplate>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/projects" element={<ProjectsPage />} />
+      </Routes>
+    </BrowserRouter>
   );
 };
 

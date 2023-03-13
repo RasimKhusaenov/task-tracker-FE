@@ -1,14 +1,16 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
-const StyledButton = styled.button`
-  color: white;
-  background-color: red;
-`;
+const StyledButton = styled.button(
+  ({ color }) => css`
+    color: ${color};
+    background-color: red;
+  `,
+);
 
-const Button = ({ label, onClick, disabled }) => {
+const Button = ({ label, onClick, disabled, color = "white" }) => {
   return (
-    <StyledButton onClick={onClick} disabled={disabled}>
+    <StyledButton color={color} onClick={onClick} disabled={disabled}>
       {label}
     </StyledButton>
   );
