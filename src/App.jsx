@@ -10,7 +10,7 @@ const App = () => {
         <li>Работаю в компании больше года</li>
         <li>Хочу понять фронтенд</li>
       </List>
-      <Button label={"OK"} />
+      <Button label="OK" />
     </DefaultTemplate>
   );
 };
