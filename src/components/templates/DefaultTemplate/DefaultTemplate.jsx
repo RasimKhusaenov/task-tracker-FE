@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 
-import Header from "../Header/Header";
-import Footer from "../Footer/Footer";
+import Header from "../../molecules/Header/Header";
+import Footer from "../../molecules/Footer/Footer";
 
 const Wrapper = styled.div`
   display: flex;
