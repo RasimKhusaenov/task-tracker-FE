@@ -1,4 +1,3 @@
-import styled from "styled-components";
 import DefaultTemplate from "../components/templates/DefaultTemplate";
 import Button from "../components/atoms/Button";
 import Table from "../components/atoms/Table";

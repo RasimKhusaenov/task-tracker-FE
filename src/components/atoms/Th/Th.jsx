@@ -5,8 +5,8 @@ const StyledTh = styled.th`
   padding: 0.5rem;
 `;
 
-const List = ({ children }) => {
-  return <StyledList>{children}</StyledList>;
+const Th = ({ children }) => {
+  return <StyledTh>{children}</StyledTh>;
 };
 
-export default List;
+export default Th;
