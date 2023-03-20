@@ -1,13 +1,7 @@
-import Header from "./components/Header";
-import Footer from "./components/Footer";
+import AppWrapper from "./components/AppWrapper";
 
 const App = () => {
-  return (
-    <div className="App">
-      <Header />
-      <Footer />
-    </div>
-  );
+  return <AppWrapper />;
 };
 
 export default App;
