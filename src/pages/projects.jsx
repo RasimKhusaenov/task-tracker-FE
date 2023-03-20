@@ -1,51 +1,39 @@
 import styled from "styled-components";
 import DefaultTemplate from "../components/templates/DefaultTemplate";
 import Button from "../components/atoms/Button";
-
-const StyledTable = styled.table`
-  width: 100%;
-  margin-bottom: 1rem;
-  vertical-align: top;
-  border-color: black;
-  background: black;
-  color: white;
-`;
-const StyledTh = styled.th`
-  padding: 0.5rem;
-`;
-const StyledTd = styled.td`
-  padding: 0.5rem;
-`;
+import Table from "../components/atoms/Table";
+import Th from "../components/atoms/Th";
+import Td from "../components/atoms/Td";
 
 const ProjectsPage = () => {
   return (
     <DefaultTemplate>
       <h1>Projects</h1>
-      <StyledTable>
+      <Table>
         <thead>
           <tr>
-            <StyledTh>Name</StyledTh>
-            <StyledTh>Description</StyledTh>
-            <StyledTh>Created At</StyledTh>
+            <Th>Name</Th>
+            <Th>Description</Th>
+            <Th>Created At</Th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <StyledTd>Mocked Project</StyledTd>
-            <StyledTd>This project is mocked</StyledTd>
-            <StyledTd>about 1 month ago</StyledTd>
-            <StyledTd>
+            <Td>Mocked Project</Td>
+            <Td>This project is mocked</Td>
+            <Td>about 1 month ago</Td>
+            <Td>
               <Button label="Tasks" />
-            </StyledTd>
-            <StyledTd>
+            </Td>
+            <Td>
               <Button label="Edit" />
-            </StyledTd>
-            <StyledTd>
+            </Td>
+            <Td>
               <Button label="Destroy" />
-            </StyledTd>
+            </Td>
           </tr>
         </tbody>
-      </StyledTable>
+      </Table>
     </DefaultTemplate>
   );
 };
