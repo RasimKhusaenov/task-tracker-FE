@@ -10,15 +10,17 @@
   },
   "plugins": ["react", "prettier"],
   "rules": {
-    "prettier/prettier": "error",
+    "prettier/prettier": "warn",
+    "import/prefer-default-export": 1,
+    "import/no-unresolved": 1,
     "react/react-in-jsx-scope": "off",
     "react/function-component-definition": [
-      "error",
+      "warn",
       {
         "namedComponents": ["arrow-function"]
       }
     ],
-    "no-restricted-exports": ["error", {
+    "no-restricted-exports": ["warn", {
       "restrictedNamedExports": [
         "then"
       ]
@@ -27,10 +29,17 @@
     "arrow-body-style": 0,
     "no-console": "off",
     "no-unused-expressions": [
-      "error",
+      "warn",
       {
         "allowTernary": true
       }
     ]
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "paths": ["./"]
+      }
+    }
   }
 }
