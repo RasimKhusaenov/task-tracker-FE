@@ -1,10 +1,9 @@
-import Link from "../components/atoms/Link";
-import DefaultTemplate from "../components/templates/DefaultTemplate";
-import Button from "../components/atoms/Button";
 import Table from "../components/atoms/Table";
 import Th from "../components/atoms/Th";
-import Td from "../components/atoms/Td";
 import { useProjects } from "../lib/hooks/states/projects";
+import DefaultTemplate from "../components/templates/DefaultTemplate";
+import ProjectTableRow from "../components/molecules/ProjectTableRow";
+
 
 const ProjectsPage = () => {
   const { projects } = useProjects();
@@ -21,21 +20,8 @@ const ProjectsPage = () => {
           </tr>
         </thead>
         <tbody>
-          {projects.map(({ id, name, description, createdAt }) => (
-            <tr>
-              <Td>{name}</Td>
-              <Td>{description}</Td>
-              <Td>{createdAt}</Td>
-              <Td>
-                <Link to={`/projects/${id}`}>Tasks</Link>
-              </Td>
-              <Td>
-                <Button label="Edit" />
-              </Td>
-              <Td>
-                <Button label="Destroy" />
-              </Td>
-            </tr>
+          {projects.map((project) => (
+            <ProjectTableRow project={project} />
           ))}
         </tbody>
       </Table>

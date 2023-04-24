@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 
+import {useNavigate} from "react-router-dom";
 import Header from "../../molecules/Header/Header";
 import Footer from "../../molecules/Footer/Footer";
 import Button from "../../atoms/Button";
@@ -43,8 +44,12 @@ const DefaultTemplate = ({ children }) => {
     window.scroll({ top: 0, behavior: "smooth" });
   };
 
+  const navigate = useNavigate();
+
   return (
     <Wrapper>
+      <Button label="Go Back" onClick={() => navigate(-1)} />
+
       <Header />
       <MainContent>{children}</MainContent>
       {showScrollButton && (
