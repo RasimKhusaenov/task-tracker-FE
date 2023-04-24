@@ -1,3 +1,4 @@
+import Link from "../components/atoms/Link";
 import DefaultTemplate from "../components/templates/DefaultTemplate";
 import Button from "../components/atoms/Button";
 import Table from "../components/atoms/Table";
@@ -22,13 +23,11 @@ const ProjectsPage = () => {
         <tbody>
           {projects.map(({ id, name, description, createdAt }) => (
             <tr>
-              <Td>
-                <a href={`/projects/${id}`}>{name}</a>
-              </Td>
+              <Td>{name}</Td>
               <Td>{description}</Td>
               <Td>{createdAt}</Td>
               <Td>
-                <Button label="Tasks" />
+                <Link to={`/projects/${id}`}>Tasks</Link>
               </Td>
               <Td>
                 <Button label="Edit" />
