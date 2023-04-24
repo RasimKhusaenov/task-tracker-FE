@@ -1,8 +1,8 @@
+import { useState } from "react";
 import Td from "../../atoms/Td";
 import Link from "../../atoms/Link";
 import Button from "../../atoms/Button";
 import DestroyProjectWindow from "../../atoms/DestroyProjectWindow";
-import {useState} from "react";
 
 const ProjectTableRow = ({ project }) => {
   const { id, name, description, createdAt } = project;
@@ -24,13 +24,9 @@ const ProjectTableRow = ({ project }) => {
           <Button label="Destroy" onClick={() => setIsDestroyModalOpen(true)} />
         </Td>
       </tr>
-      <DestroyProjectWindow
-          isOpen={isDestroyModalOpen}
-          projectName={name}
-          setIsOpen={setIsDestroyModalOpen}
-      />
+      <DestroyProjectWindow isOpen={isDestroyModalOpen} projectName={name} setIsOpen={setIsDestroyModalOpen} />
     </>
-  )
-}
+  );
+};
 
 export default ProjectTableRow;

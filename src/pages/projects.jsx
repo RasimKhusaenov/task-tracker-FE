@@ -4,7 +4,6 @@ import { useProjects } from "../lib/hooks/states/projects";
 import DefaultTemplate from "../components/templates/DefaultTemplate";
 import ProjectTableRow from "../components/molecules/ProjectTableRow";
 
-
 const ProjectsPage = () => {
   const { projects } = useProjects();
 

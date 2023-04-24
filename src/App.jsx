@@ -1,4 +1,4 @@
-import {BrowserRouter, Routes, Route, Navigate} from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { ApolloProvider } from "@apollo/client";
 import apolloClient from "src/lib/apolloClient";
 
