@@ -1,34 +1,34 @@
+import {useParams} from "react-router-dom";
 import DefaultTemplate from "../components/templates/DefaultTemplate";
 import Button from "../components/atoms/Button";
 import Table from "../components/atoms/Table";
 import Th from "../components/atoms/Th";
 import Td from "../components/atoms/Td";
-import { useProjects } from "../lib/hooks/states/projects";
+import { useProject } from "../lib/hooks/states/project";
 
-const ProjectsPage = () => {
-  const { projects } = useProjects();
+const ProjectPage = () => {
+  const { id } = useParams();
+  const { tasks } = useProject({ id });
 
   return (
     <DefaultTemplate>
-      <h1>Projects</h1>
+      <h1>Tasks</h1>
       <Table>
         <thead>
           <tr>
-            <Th>Name</Th>
+            <Th>Title</Th>
             <Th>Description</Th>
             <Th>Created At</Th>
           </tr>
         </thead>
         <tbody>
-          {projects.map(({ id, name, description, createdAt }) => (
+          {tasks.map(({ title, description, createdAt }) => (
             <tr>
-              <Td>
-                <a href={`/projects/${id}`}>{name}</a>
-              </Td>
+              <Td>{title}</Td>
               <Td>{description}</Td>
               <Td>{createdAt}</Td>
               <Td>
-                <Button label="Tasks" />
+                <Button label="Comments" />
               </Td>
               <Td>
                 <Button label="Edit" />
@@ -44,4 +44,4 @@ const ProjectsPage = () => {
   );
 };
 
-export default ProjectsPage;
+export default ProjectPage;
