@@ -9,7 +9,7 @@ export const useProject = ({ id }) => {
   });
 
   return {
-    tasks: data?.project?.tasks || [],
+    project: data?.project || {},
     loading,
     error,
   };

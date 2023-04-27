@@ -20,7 +20,7 @@ const ProjectsPage = () => {
         </thead>
         <tbody>
           {projects.map((project) => (
-            <ProjectTableRow project={project} />
+            <ProjectTableRow key={project.id} project={project} />
           ))}
         </tbody>
       </Table>

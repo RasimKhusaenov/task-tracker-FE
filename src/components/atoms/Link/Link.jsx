@@ -10,9 +10,9 @@ const StyledLink = styled(RouterLink)(
   `,
 );
 
-const Link = ({ children, to = "#", color = "#fff", backgroundColor = "transparent", borderColor = "#0d6efd" }) => {
+const Link = ({ children, to = "#", color = "#fff", $backgroundColor = "transparent", $borderColor = "#0d6efd" }) => {
   return (
-    <StyledLink to={to} color={color} backgroundColor={backgroundColor} borderColor={borderColor}>
+    <StyledLink to={to} color={color} backgroundColor={$backgroundColor} borderColor={$borderColor}>
       {children}
     </StyledLink>
   );

@@ -1,4 +1,4 @@
-import {useParams} from "react-router-dom";
+import { useParams } from "react-router-dom";
 import DefaultTemplate from "../components/templates/DefaultTemplate";
 import Button from "../components/atoms/Button";
 import Table from "../components/atoms/Table";
@@ -8,7 +8,7 @@ import { useProject } from "../lib/hooks/states/project";
 
 const ProjectPage = () => {
   const { id } = useParams();
-  const { tasks } = useProject({ id });
+  const { project } = useProject({ id });
 
   return (
     <DefaultTemplate>
@@ -22,8 +22,8 @@ const ProjectPage = () => {
           </tr>
         </thead>
         <tbody>
-          {tasks.map(({ title, description, createdAt }) => (
-            <tr>
+          {project?.tasks?.map(({ id: taskId, title, description, createdAt }) => (
+            <tr key={taskId}>
               <Td>{title}</Td>
               <Td>{description}</Td>
               <Td>{createdAt}</Td>
